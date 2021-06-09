@@ -2,13 +2,13 @@ import Color from './Color';
 import {isUndefined} from "./functions/func";
 
 const hue_color = [
-    { rgb : '#ff0000', start : .0 },
-    { rgb : '#ffff00', start : .17 },
-    { rgb : '#00ff00', start : .33 },
-    { rgb : '#00ffff', start : .50 },
-    { rgb : '#0000ff', start : .67 },
-    { rgb : '#ff00ff', start : .83 },
-    { rgb : '#ff0000', start : 1 }
+    { rgb : '#ff0000', start : .0, ...Color.parse("#ff0000") },
+    { rgb : '#ffff00', start : .17, ...Color.parse("#ffff00") },
+    { rgb : '#00ff00', start : .33, ...Color.parse("#00ff00") },
+    { rgb : '#00ffff', start : .50, ...Color.parse("#00ffff") },
+    { rgb : '#0000ff', start : .67, ...Color.parse("#0000ff") },
+    { rgb : '#ff00ff', start : .83, ...Color.parse("#ff00ff") },
+    { rgb : '#ff0000', start : 1, ...Color.parse("#ff0000") },
 ];
 
 function checkHueColor(p) {
@@ -57,20 +57,6 @@ function getHueScale(p, minScale = 0.1, maxScale) {
 
     return list;
 }
-
-function initHueColors () {
-    for(var i = 0, len = hue_color.length; i < len; i++) {
-        var hue = hue_color[i];
-
-        var obj = Color.parse(hue.rgb);
-
-        hue.r = obj.r;
-        hue.g = obj.g;
-        hue.b = obj.b;
-    }
-}
-
-initHueColors();
 
 export default { 
     colors : hue_color,
