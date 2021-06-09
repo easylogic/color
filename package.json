@@ -1,6 +1,6 @@
 {
   "name": "@easylogic/color",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple color manipulate functions with easylogic",
   "main": "./dist/color.js",
   "scripts": {
