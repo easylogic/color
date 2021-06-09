@@ -4,10 +4,15 @@ module.exports = {
   mode: "production",
   entry: './src/index.js',
   output: {
-    library: "EasyLogicColor",
-    libraryTarget: "umd",
+    library: {
+      name: 'EasyLogicColor',
+      type: "umd",
+      export: "default"
+    },
     path: path.resolve(__dirname, '../dist'),
     filename: 'color.js',
+
+
   },
   resolve: {
     extensions: [".js"]

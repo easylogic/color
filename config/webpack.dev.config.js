@@ -6,7 +6,11 @@ module.exports = {
   mode: "development",
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'addon'),
+    library: {
+      name: "EasyLogicColor",
+      type: "umd",
+      export: 'default',
+    },
     filename: 'color.js',
   },
   resolve: {
