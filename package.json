@@ -1,66 +1,55 @@
 {
-  "name": "@easylogic/colorpicker",
-  "version": "1.10.5",
-  "description": "simple colorpicker used anywhere",
-  "main": "./dist/colorpicker.js",
+  "name": "@easylogic/color",
+  "version": "0.0.1",
+  "description": "simple color manipulate functions with easylogic",
+  "main": "./dist/color.js",
   "scripts": {
     "pub": "npm run build && npm publish",
-    "build": "NODE_ENV=production rollup --config config/rollup.config.prod.js",
-    "dev": "NODE_ENV=production rollup -w --config config/rollup.config.dev.js",
+    "build": "NODE_ENV=production webpack --config config/webpack.prod.config.js",
+    "dev": "NODE_ENV=development webpack serve --port=3000 --config config/webpack.dev.config.js --open",
     "docs": "http-server ./docs",
-    "test": "NODE_ENV=test jest --watch"
+    "test": "NODE_ENV=test jest --watch",
+    "release": "release-it *"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/easylogic/colorpicker.git"
+    "url": "git+https://github.com/easylogic/color.git"
   },
   "keywords": [
-    "colorview",
-    "colorpicker",
     "imagefilter",
     "color",
     "rgb",
-    "webgl",
-    "chromdevtool",
-    "macos",
-    "sketch",
-    "palette"
+    "webgl"
   ],
   "author": "easylogic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/easylogic/easylogic-colorpicker/issues"
+    "url": "https://github.com/easylogic/color/issues"
   },
   "homepage": "https://colorpicker.easylogic.studio/",
   "devDependencies": {
-    "autoprefixer": "^7.2.5",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.1",
+    "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-minify": "^0.2.0",
     "cross-env": "^5.1.1",
-    "http-server": "^0.11.1",
-    "jest": "^22.4.2",
-    "jest-cli": "^22.4.2",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
+    "jest-cli": "^27.0.4",
     "jest-report": "^0.1.11",
-    "rollup": "^0.52.1",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-css-only": "^0.2.0",
-    "rollup-plugin-json": "^2.3.0",
-    "rollup-plugin-livereload": "^0.6.0",
-    "rollup-plugin-minify": "^1.0.3",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.2.7",
-    "rollup-plugin-scss": "^0.4.0",
-    "rollup-plugin-serve": "^0.4.2",
-    "rollup-plugin-uglify": "^2.0.1",
-    "rollup-watch": "^4.3.1",
-    "uglify-es": "^3.2.2"
+    "release-it": "^14.8.0",
+    "uglify-es": "^3.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "jest": {
     "modulePaths": [

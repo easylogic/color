@@ -2,7 +2,6 @@ import ColorNames from '../ColorNames'
 
 import { RGBtoHSL } from './fromRGB'
 import { HSLtoRGB } from './fromHSL'
-import { round } from './math';
 
 const color_regexp = /(#(?:[\da-f]{3}){1,2}|#(?:[\da-f]{8})|rgb\((?:\s*\d{1,3},\s*){2}\d{1,3}\s*\)|rgba\((?:\s*\d{1,3},\s*){3}\d*\.?\d+\s*\)|hsl\(\s*\d{1,3}(?:,\s*\d{1,3}%){2}\s*\)|hsla\(\s*\d{1,3}(?:,\s*\d{1,3}%){2},\s*\d*\.?\d+\s*\)|([\w_\-]+))/gi;
 const color_split = ','

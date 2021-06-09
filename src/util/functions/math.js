@@ -25,32 +25,8 @@ export function radianToDegree(radian) {
 
     return angle; 
 }
-
-
-export function getXInCircle (angle, radius, centerX = 0) {
-    return centerX + radius * Math.cos(degreeToRadian (angle))
-}
-
-export function getYInCircle (angle, radius, centerY = 0) {
-    return centerY + radius * Math.sin(degreeToRadian(angle))
-}    
-
-export function getXYInCircle (angle, radius, centerX = 0, centerY = 0) {
-    return {
-        x : getXInCircle(angle, radius, centerX),
-        y : getYInCircle(angle, radius, centerY)
-    }
-}
-
-export function caculateAngle (rx, ry) {
-    return radianToDegree(Math.atan2(ry, rx))
-}
-
 export default {
     round,
     radianToDegree,
     degreeToRadian,
-    getXInCircle,
-    getYInCircle,
-    caculateAngle
 }
