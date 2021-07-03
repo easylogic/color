@@ -13,9 +13,16 @@ npm install @easylogic/color
 # How to use 
  
 ```
-import { Color } from '@easylogic/color' 
+import Color from '@easylogic/color' 
 ```
 
+# Functions 
+
+```js
+
+
+
+```
 
 
 

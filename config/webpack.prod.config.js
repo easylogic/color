@@ -6,7 +6,7 @@ module.exports = {
   output: {
     library: {
       type: 'umd',
-      name: "EasyLogicColor",
+      name: "Color",
       export: "default"
     },
     path: path.resolve(__dirname, '../dist'),

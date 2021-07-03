@@ -400,6 +400,13 @@
     </style>
 </head>
 <body>
+<section class="color-scale-area">
+    <h1>Color Random</h1>
+    <div>
+        <span id="color-name"></span>
+        <span id="color-view" style="display: inline-block;width:20px;height:20px;vertical-align: middle;"></span>
+    </div>
+</section>
 
 <section class="color-scale-area">
 <h1>Color Scales</h1>
@@ -520,6 +527,12 @@ function runColor() {
     var colors = [ 'red', 'blue', 'white' ];
 
     var Color = EasyLogicColor;
+
+    var randomColor = Color.random();
+
+    document.getElementById('color-name').textContent = randomColor;
+    document.getElementById('color-view').style.backgroundColor = randomColor;
+
     var nodes = document.querySelectorAll(".color-scale");
     for(var i = 0, len = nodes.length; i < len; i++) {
         var item = nodes[i];
