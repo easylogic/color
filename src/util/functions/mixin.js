@@ -30,7 +30,7 @@ export function randomRGBA() {
 export function randomByCount (count = 1) {
     let arr = []
     for(var i = 0; i < count; i++) {
-        arr[arr.length] = Color.random();
+        arr[arr.length] = random();
     }
 
     return arr; 
